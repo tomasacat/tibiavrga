@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+    <title>Guild Tracker</title>
+    <div class="box2">
+    <input type="text" id="guildName" placeholder="Enter Guild Name">
+    <button onclick="guildToTrack()">Guild Tracker</button>
+    </div>
+    
+    <div class="box2">
+        <label>
+            <input type="checkbox" id="showBoostedCheckbox">
+            Show Daily Events
+        </label>
+    </div>
+        <div id="boostedCreatureDisplay" class="box3"></div>
+        
+        <div id="boostedBossDisplay" class="box3"></div>
+        <div id="rashidDisplay" class="box3"></div>
+    <br>
+
+    <div class="box">
+    <h2>Main Members</h2>
+    <table id="guildMainTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable('name')">Name</th>
+                <th onclick="sortTable('vocation')">Vocation</th>
+                <th onclick="sortTable('level')">Level</th>
+                <th>Group</th>
+            </tr>
+        </thead>
+        <tbody id="guildMainTableBody">
+        </tbody>
+    </table>
+    </div>
+
+    <div class="box">
+    <h2>Bomb Members</h2>
+    <table id="guildBombTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable('name')">Name</th>
+                <th onclick="sortTable('vocation')">Vocation</th>
+                <th onclick="sortTable('level')">Level</th>
+                <th>Group</th>
+            </tr>
+        </thead>
+        <tbody id="guildBombTableBody">
+        </tbody>
+    </table>
+    </div>
+    
+    <div class="box">
+    <h2>Maker Members</h2>
+    <table id="guildMakerTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable('name')">Name</th>
+                <th onclick="sortTable('vocation')">Vocation</th>
+                <th onclick="sortTable('level')">Level</th>
+                <th>Group</th>
+            </tr>
+        </thead>
+        <tbody id="guildMakerTableBody">
+        </tbody>
+    </table>
+    </div>
+
+    <div class="box">
+    <h2>Online Counter</h2>
+    <table id="memberOnline">
+        <thead>
+            <tr>
+                <th>TOTAL ONLINE</th>
+                <th>Main Online</th>
+                <th>Bomb Online</th>
+                <th>Maker Online</th>
+            </tr>
+        </thead>
+        <tbody id="onlineCounts">
+        </tbody>
+    </table>
+    </div>
+
+
+    <div id="logContainer">
+        <h2>Recent Events</h2>
+    </div>
+
+
+
+
+
+    <script src="new.js"></script>
+    <script src="dailyboss.js"></script>
+
+</body>
+</html>

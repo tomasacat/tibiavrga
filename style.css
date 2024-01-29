@@ -1,0 +1,120 @@
+
+body {
+    color:#FFFFFF;
+    background-color: #555;
+
+    
+    }
+
+
+table {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+
+}
+
+.box {
+    font-size: 10px;
+    font-family: Verdana;
+    border-collapse: collapse;
+    display: inline-table;
+    margin-right: 0px;
+    width: 18%;
+    height: 33.33%;
+}
+
+.box2 {
+    display: inline-block;
+    width: auto;
+    font-family: Verdana;
+    height: 100px;
+    font-size: large;
+    margin-top: 50px;
+    margin-left: 50px;
+
+
+}
+
+.box2 label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: auto;
+
+}
+
+.box3 {
+    display: inline-block;
+    font-size: 22px;
+    margin-left: 50px;
+    
+}
+
+.box3 img {
+    margin-right: 10px;
+}
+
+
+h2 {
+    text-align: center;
+    font-size: 18px;
+    border: 0.5px solid;
+    margin: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background-color: #000000;
+}
+
+td, th {
+    border: 1px solid rgb(34, 32, 32);
+
+    
+}
+
+thead {
+
+    width: auto;
+}
+
+thead tr {
+    background-color:#000000;
+    color:#FFFFFF;
+    cursor: pointer;
+}
+
+thead tr > th:hover {
+    color:aqua;
+    
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #615e5eb6;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #272525;
+}
+
+tbody tr:hover {
+    background-color: lightgreen;
+    cursor: pointer;
+    
+}
+
+
+#logContainer {
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 5px;
+    height: 33.33%;
+    overflow-y: auto; 
+    resize: vertical;
+    width: 20%;
+    vertical-align: top;
+    position: relative;
+}
+
+

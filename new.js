@@ -1,5 +1,5 @@
 let oldOnlineMembers = [];
-const updateInterval = 20000;
+const updateInterval = 60000;
 let currentSort = {
     column: null,
     order: 'ascending' 

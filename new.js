@@ -234,4 +234,4 @@ function copyToClipboard(name) {
 }
 
 
-setInterval(guildToTrack, updateInterval);
+setInterval(guildInfo, updateInterval);

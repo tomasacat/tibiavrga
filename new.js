@@ -1,3 +1,4 @@
+let currentGuildName = null;
 let oldOnlineMembers = [];
 const updateInterval = 60000;
 let currentSort = {
@@ -5,18 +6,20 @@ let currentSort = {
     order: 'ascending' 
 };
 
-// get guild name, remove unwanted characters, and insert to api, if NO guild in entered return false
+// get guild name, remove unwanted characters, check if !newGuildName truthy or falsy if NO guild in entered or is falsy return... 
+// if newGuild is not equalto current guildname 
 function guildToTrack() {
-    const guild = document.getElementById('guildName').value.trim();
+    const newGuildName = document.getElementById('guildName').value.trim();
 
-    if (!guild) {
-        alert("Please enter a guild name.");
-        return;
+    if (!newGuildName) {
+        return; 
     }
 
-    const tibiaApi = `https://api.tibiadata.com/v4/guild/${guild}`;
-    guildInfo(tibiaApi);
-
+    if (newGuildName !== currentGuildName) {
+        currentGuildName = newGuildName;
+        const tibiaApi = `https://api.tibiadata.com/v4/guild/${currentGuildName}`;
+        guildInfo(tibiaApi);
+    }
 }
 
 //  fetch api, if response not equal 200, return error. If response is equal 200, get only online guild members,

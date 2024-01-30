@@ -12,15 +12,24 @@ function guildToTrack() {
     const newGuildName = document.getElementById('guildName').value.trim();
 
     if (!newGuildName) {
-        return; 
+        return;
     }
 
     if (newGuildName !== currentGuildName) {
         currentGuildName = newGuildName;
+    }
+
+    fetchGuildData();
+}
+
+function fetchGuildData() {
+    if (currentGuildName) {
         const tibiaApi = `https://api.tibiadata.com/v4/guild/${currentGuildName}`;
         guildInfo(tibiaApi);
     }
 }
+
+setInterval(guildToTrack, updateInterval);
 
 //  fetch api, if response not equal 200, return error. If response is equal 200, get only online guild members,
 // map by name, vocation, level, group if less than or equal to 130, group is Maker, if less than or equal to 400, group is Bomb, else group is Main
@@ -234,4 +243,3 @@ function copyToClipboard(name) {
 }
 
 
-setInterval(guildInfo, updateInterval);
